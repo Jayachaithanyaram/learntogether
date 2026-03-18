@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Privacy Policy — LearnTogether</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080810;--bg2:#0f0f18;--card:#111119;--border:#252535;
+  --text:#eeeef8;--muted:#6a6a88;--accent:#6c63ff;--accent2:#a855f7;
+  --good:#22c55e;--fhead:'Syne',sans-serif;--fbody:'Manrope',sans-serif;
+}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--fbody);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── Navbar ── */
+.nb{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,8,16,.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nb-inner{
+  max-width:900px;margin:0 auto;padding:0 24px;
+  height:56px;display:flex;align-items:center;justify-content:space-between;
+}
+.nb-logo{
+  font-family:var(--fhead);font-size:1.1rem;font-weight:800;letter-spacing:-.02em;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  cursor:pointer;
+}
+.nb-back{
+  display:flex;align-items:center;gap:6px;
+  font-size:.82rem;color:var(--muted);
+  padding:6px 14px;border-radius:8px;
+  background:var(--bg2);border:1px solid var(--border);
+  cursor:pointer;transition:all .2s;text-decoration:none;
+}
+.nb-back:hover{color:var(--text);border-color:var(--accent);text-decoration:none}
+
+/* ── Hero ── */
+.hero{
+  background:linear-gradient(135deg,rgba(108,99,255,.08),rgba(168,85,247,.05));
+  border-bottom:1px solid var(--border);
+  padding:52px 24px 40px;
+  text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(108,99,255,.1);border:1px solid rgba(108,99,255,.25);
+  border-radius:99px;padding:4px 14px;font-size:.72rem;
+  color:var(--accent);font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:16px;
+}
+.hero h1{
+  font-family:var(--fhead);font-size:2.4rem;font-weight:800;
+  letter-spacing:-.03em;margin-bottom:10px;
+}
+.hero h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{color:var(--muted);font-size:.9rem;max-width:520px;margin:0 auto 20px}
+.hero-meta{
+  display:inline-flex;align-items:center;gap:16px;
+  font-size:.75rem;color:var(--muted);font-family:'DM Mono',monospace;
+  flex-wrap:wrap;justify-content:center;
+}
+.hero-meta span{display:flex;align-items:center;gap:5px}
+
+/* ── Layout ── */
+.page-wrap{max-width:900px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+@media(max-width:720px){.page-wrap{grid-template-columns:1fr}.toc-wrap{display:none}}
+
+/* ── TOC ── */
+.toc-wrap{position:sticky;top:76px}
+.toc-title{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
+.toc-list{list-style:none}
+.toc-list li{margin-bottom:2px}
+.toc-list a{
+  display:block;padding:6px 10px;border-radius:7px;
+  font-size:.8rem;color:var(--muted);transition:all .2s;
+  border-left:2px solid transparent;
+}
+.toc-list a:hover{color:var(--text);background:var(--bg2);text-decoration:none}
+.toc-list a.active{color:var(--accent);border-left-color:var(--accent);background:rgba(108,99,255,.06)}
+
+/* ── Content ── */
+.doc-content{}
+.section{margin-bottom:44px;padding-bottom:44px;border-bottom:1px solid var(--border)}
+.section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.section-num{
+  display:inline-block;font-size:.65rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  color:var(--accent);margin-bottom:8px;
+  background:rgba(108,99,255,.1);padding:2px 8px;border-radius:4px;
+}
+.section h2{
+  font-family:var(--fhead);font-size:1.3rem;font-weight:700;
+  margin-bottom:14px;letter-spacing:-.01em;
+}
+.section p{font-size:.9rem;color:var(--muted);margin-bottom:12px;line-height:1.75}
+.section p:last-child{margin-bottom:0}
+.section ul,.section ol{padding-left:20px;margin-bottom:12px}
+.section li{font-size:.88rem;color:var(--muted);margin-bottom:6px;line-height:1.65}
+.section strong{color:var(--text);font-weight:600}
+
+.info-card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:18px 20px;margin:16px 0;
+}
+.info-card-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px}
+.info-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:.84rem}
+.info-row:last-child{border-bottom:none;padding-bottom:0}
+.info-row-label{color:var(--muted)}
+.info-row-val{font-weight:600;color:var(--text)}
+
+.highlight-box{
+  background:linear-gradient(135deg,rgba(108,99,255,.08),rgba(168,85,247,.05));
+  border:1px solid rgba(108,99,255,.2);border-radius:10px;
+  padding:16px 18px;margin:14px 0;font-size:.85rem;color:var(--text);line-height:1.65;
+}
+.highlight-box strong{color:var(--accent)}
+
+.data-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.83rem}
+.data-table th{
+  background:var(--bg2);color:var(--muted);font-size:.67rem;
+  text-transform:uppercase;letter-spacing:.08em;font-weight:600;
+  padding:9px 14px;text-align:left;border-bottom:1px solid var(--border);
+}
+.data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--muted)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table td:first-child{color:var(--text);font-weight:500}
+
+/* ── Footer ── */
+.doc-footer{
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:28px 24px;margin-top:0;
+}
+.doc-footer-inner{
+  max-width:900px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.doc-footer-logo{font-family:var(--fhead);font-size:.9rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.doc-footer-links{display:flex;gap:18px}
+.doc-footer-links a{font-size:.75rem;color:var(--muted);transition:color .2s}
+.doc-footer-links a:hover{color:var(--accent);text-decoration:none}
+.doc-footer-copy{font-size:.72rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav class="nb">
+  <div class="nb-inner">
+    <div class="nb-logo" onclick="window.location.href='index.html'">LearnTogether</div>
+    <a class="nb-back" onclick="window.history.back()" style="cursor:pointer">← Back to Portal</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">📄 Legal Document</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <div class="hero-sub">We are committed to protecting your personal information and your right to privacy.</div>
+  <div class="hero-meta">
+    <span>📅 Last updated: March 2026</span>
+    <span>📖 ~5 min read</span>
+    <span>✅ GDPR Aligned</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <!-- Table of Contents -->
+  <aside class="toc-wrap">
+    <div class="toc-title">On this page</div>
+    <ul class="toc-list">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Data</a></li>
+      <li><a href="#data-storage">Data Storage</a></li>
+      <li><a href="#sharing">Data Sharing</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="doc-content">
+
+    <div class="section" id="overview">
+      <span class="section-num">01 — Overview</span>
+      <h2>Who We Are and What This Policy Covers</h2>
+      <p>LearnTogether ("we", "us", "our") operates the LearnTogether learning portal — a curated educational platform that connects learners with quality learning resources.</p>
+      <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform. Please read this policy carefully. If you disagree with its terms, please discontinue use of the platform.</p>
+      <div class="info-card">
+        <div class="info-card-title">Platform Information</div>
+        <div class="info-row"><span class="info-row-label">Platform Name</span><span class="info-row-val">LearnTogether</span></div>
+        <div class="info-row"><span class="info-row-label">Platform Type</span><span class="info-row-val">Educational Learning Portal</span></div>
+        <div class="info-row"><span class="info-row-label">Data Controller</span><span class="info-row-val">LearnTogether Administrator</span></div>
+        <div class="info-row"><span class="info-row-label">Infrastructure</span><span class="info-row-val">Google Firebase (Firestore + Auth)</span></div>
+        <div class="info-row"><span class="info-row-label">Effective Date</span><span class="info-row-val">March 2026</span></div>
+      </div>
+    </div>
+
+    <div class="section" id="data-collected">
+      <span class="section-num">02 — Data Collection</span>
+      <h2>Information We Collect</h2>
+      <p>We collect only the minimum information necessary to provide the LearnTogether service effectively. We do <strong>not</strong> collect any information you do not directly provide.</p>
+      <table class="data-table">
+        <thead>
+          <tr><th>Data Type</th><th>What We Collect</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Account Credentials</td><td>Username and hashed password</td><td>To identify and authenticate you</td></tr>
+          <tr><td>Email Address</td><td>Admin email only (not regular users)</td><td>Account verification and security</td></tr>
+          <tr><td>Learning Progress</td><td>Which courses you've completed</td><td>To track and display your progress</td></tr>
+          <tr><td>Bookmarks</td><td>Courses you've saved</td><td>To remember your saved courses</td></tr>
+          <tr><td>Activity Log</td><td>Actions taken (opened course, changed password)</td><td>For admin oversight and support</td></tr>
+          <tr><td>Session Status</td><td>Online/offline status and last seen time</td><td>To show presence information</td></tr>
+          <tr><td>Reviews</td><td>Star ratings and written reviews you submit</td><td>To share feedback with other learners</td></tr>
+        </tbody>
+      </table>
+      <div class="highlight-box">
+        <strong>We do NOT collect:</strong> real names, phone numbers, payment information, location data, device fingerprints, browsing history outside our platform, or any biometric data.
+      </div>
+    </div>
+
+    <div class="section" id="how-we-use">
+      <span class="section-num">03 — Usage</span>
+      <h2>How We Use Your Information</h2>
+      <p>Your information is used solely to operate the LearnTogether platform. Specifically we use it to:</p>
+      <ul>
+        <li>Authenticate you and maintain your login session securely</li>
+        <li>Display your course progress and completion status</li>
+        <li>Show your bookmarked courses across sessions</li>
+        <li>Allow the administrator to monitor platform engagement and provide support</li>
+        <li>Show your reviews and ratings to other users of the platform</li>
+        <li>Track whether you are currently active on the platform</li>
+        <li>Send email verification when you create an admin account</li>
+      </ul>
+      <p>We do <strong>not</strong> use your data for advertising, profiling, selling to third parties, or any purpose beyond operating this educational platform.</p>
+    </div>
+
+    <div class="section" id="data-storage">
+      <span class="section-num">04 — Storage</span>
+      <h2>Where Your Data is Stored</h2>
+      <p>All data is stored on <strong>Google Firebase</strong> (Cloud Firestore database and Firebase Authentication), which is Google's secure cloud infrastructure.</p>
+      <ul>
+        <li><strong>Firebase Firestore</strong> — stores your username, progress, bookmarks, activity logs and reviews</li>
+        <li><strong>Firebase Authentication</strong> — stores admin email and securely manages authentication tokens</li>
+        <li><strong>Your browser</strong> — stores your theme preference (dark/light mode) only in localStorage</li>
+      </ul>
+      <p>Google Firebase complies with GDPR, SOC 2, ISO 27001, and other major data protection standards. Your data is encrypted in transit (TLS) and at rest.</p>
+      <div class="highlight-box">
+        <strong>Data retention:</strong> Your data is retained for as long as your account exists. If your account is deleted by the administrator, all associated data is permanently removed from Firestore.
+      </div>
+    </div>
+
+    <div class="section" id="sharing">
+      <span class="section-num">05 — Sharing</span>
+      <h2>Data Sharing and Disclosure</h2>
+      <p>We do not sell, trade, rent, or share your personal information with third parties for commercial purposes. Your data may only be accessed in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Platform Administrator</strong> — the admin of your LearnTogether portal can see your username, progress percentage, online status, and activity log as part of platform management</li>
+        <li><strong>Google Firebase</strong> — as our infrastructure provider, Google processes data per their own privacy policy and data processing agreements</li>
+        <li><strong>Legal Requirements</strong> — if required by law, court order, or government authority, we may be required to disclose information</li>
+        <li><strong>Other Users</strong> — your username and star ratings/reviews are visible to other users of the same platform</li>
+      </ul>
+    </div>
+
+    <div class="section" id="security">
+      <span class="section-num">06 — Security</span>
+      <h2>How We Protect Your Data</h2>
+      <p>We implement appropriate technical and organisational measures to protect your personal information:</p>
+      <ul>
+        <li>All data transmitted between your browser and our servers is encrypted using HTTPS/TLS</li>
+        <li>Passwords are stored as hashed values — never as plain text</li>
+        <li>Admin accounts require email verification before access is granted</li>
+        <li>Admin logout requires OTP (one-time password) verification for an additional layer of security</li>
+        <li>Firebase Security Rules restrict database access to authorised requests only</li>
+        <li>Firebase Authentication handles all admin credentials using Google's secure infrastructure</li>
+      </ul>
+      <p>However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee its absolute security.</p>
+    </div>
+
+    <div class="section" id="your-rights">
+      <span class="section-num">07 — Your Rights</span>
+      <h2>Your Data Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right to Access</strong> — you can request a copy of the data we hold about you</li>
+        <li><strong>Right to Correction</strong> — you can update your password at any time through the platform settings</li>
+        <li><strong>Right to Deletion</strong> — you can request that your account and all associated data be deleted by contacting the platform administrator</li>
+        <li><strong>Right to Portability</strong> — you can request an export of your data in a machine-readable format</li>
+        <li><strong>Right to Object</strong> — you can object to certain processing of your data</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the information in the Contact section below or reach out to your platform administrator directly.</p>
+    </div>
+
+    <div class="section" id="cookies">
+      <span class="section-num">08 — Cookies</span>
+      <h2>Cookies and Local Storage</h2>
+      <p>LearnTogether uses minimal browser storage:</p>
+      <ul>
+        <li><strong>localStorage (kp-theme)</strong> — stores your dark/light theme preference. This is stored only on your device and never transmitted to our servers. You can clear it at any time by clearing your browser storage.</li>
+        <li><strong>Firebase Authentication tokens</strong> — Firebase stores authentication session tokens in your browser to keep you logged in. These are managed by Google Firebase and expire automatically.</li>
+      </ul>
+      <p>We do not use third-party advertising cookies, tracking pixels, or analytics cookies. We do not track you across other websites.</p>
+    </div>
+
+    <div class="section" id="children">
+      <span class="section-num">09 — Children</span>
+      <h2>Children's Privacy</h2>
+      <p>LearnTogether is designed as an educational platform and may be used by learners of all ages. However, user accounts are created exclusively by the platform administrator — users cannot self-register.</p>
+      <p>We do not knowingly collect personal information from children under 13 without parental consent. If you are a parent or guardian and believe your child has been provided an account without your knowledge, please contact the platform administrator immediately.</p>
+    </div>
+
+    <div class="section" id="changes">
+      <span class="section-num">10 — Changes</span>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+      <p>Continued use of the platform after changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <span class="section-num">11 — Contact</span>
+      <h2>Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <div class="info-card">
+        <div class="info-card-title">Contact Information</div>
+        <div class="info-row"><span class="info-row-label">Platform</span><span class="info-row-val">LearnTogether</span></div>
+        <div class="info-row"><span class="info-row-label">Email</span><span class="info-row-val"><a href="mailto:learntogether288@gmail.com">learntogether288@gmail.com</a></span></div>
+        <div class="info-row"><span class="info-row-label">Response Time</span><span class="info-row-val">Within 48 hours</span></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="doc-footer">
+  <div class="doc-footer-inner">
+    <div class="doc-footer-logo">LearnTogether</div>
+    <div class="doc-footer-links">
+      <a href="index.html">Portal</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="doc-footer-copy">© 2026 LearnTogether. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Active TOC highlighting
+const sections = document.querySelectorAll('.section[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 100) current = s.id; });
+  tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#'+current));
+});
+</script>
+</body>
+</html>

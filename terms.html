@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Terms of Service — LearnTogether</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080810;--bg2:#0f0f18;--card:#111119;--border:#252535;--text:#eeeef8;--muted:#6a6a88;--accent:#6c63ff;--accent2:#a855f7;--warn:#f59e0b;--danger:#ef4444;--fhead:'Syne',sans-serif;--fbody:'Manrope',sans-serif}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--fbody);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.nb{position:sticky;top:0;z-index:100;background:rgba(8,8,16,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nb-inner{max-width:900px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nb-logo{font-family:var(--fhead);font-size:1.1rem;font-weight:800;letter-spacing:-.02em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer}
+.nb-back{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);padding:6px 14px;border-radius:8px;background:var(--bg2);border:1px solid var(--border);cursor:pointer;transition:all .2s;text-decoration:none}
+.nb-back:hover{color:var(--text);border-color:var(--accent);text-decoration:none}
+.hero{background:linear-gradient(135deg,rgba(108,99,255,.08),rgba(168,85,247,.05));border-bottom:1px solid var(--border);padding:52px 24px 40px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:99px;padding:4px 14px;font-size:.72rem;color:var(--warn);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-family:var(--fhead);font-size:2.4rem;font-weight:800;letter-spacing:-.03em;margin-bottom:10px}
+.hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--muted);font-size:.9rem;max-width:520px;margin:0 auto 20px}
+.hero-meta{display:inline-flex;align-items:center;gap:16px;font-size:.75rem;color:var(--muted);flex-wrap:wrap;justify-content:center}
+.page-wrap{max-width:900px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+@media(max-width:720px){.page-wrap{grid-template-columns:1fr}.toc-wrap{display:none}}
+.toc-wrap{position:sticky;top:76px}
+.toc-title{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
+.toc-list{list-style:none}
+.toc-list li{margin-bottom:2px}
+.toc-list a{display:block;padding:6px 10px;border-radius:7px;font-size:.8rem;color:var(--muted);transition:all .2s;border-left:2px solid transparent}
+.toc-list a:hover{color:var(--text);background:var(--bg2);text-decoration:none}
+.toc-list a.active{color:var(--accent);border-left-color:var(--accent);background:rgba(108,99,255,.06)}
+.section{margin-bottom:44px;padding-bottom:44px;border-bottom:1px solid var(--border)}
+.section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.section-num{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:8px;background:rgba(108,99,255,.1);padding:2px 8px;border-radius:4px}
+.section h2{font-family:var(--fhead);font-size:1.3rem;font-weight:700;margin-bottom:14px;letter-spacing:-.01em}
+.section p{font-size:.9rem;color:var(--muted);margin-bottom:12px;line-height:1.75}
+.section p:last-child{margin-bottom:0}
+.section ul,.section ol{padding-left:20px;margin-bottom:12px}
+.section li{font-size:.88rem;color:var(--muted);margin-bottom:6px;line-height:1.65}
+.section strong{color:var(--text);font-weight:600}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin:16px 0}
+.info-card-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:10px}
+.info-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:.84rem}
+.info-row:last-child{border-bottom:none;padding-bottom:0}
+.info-row-label{color:var(--muted)}
+.info-row-val{font-weight:600;color:var(--text)}
+.highlight-box{background:linear-gradient(135deg,rgba(108,99,255,.08),rgba(168,85,247,.05));border:1px solid rgba(108,99,255,.2);border-radius:10px;padding:16px 18px;margin:14px 0;font-size:.85rem;color:var(--text);line-height:1.65}
+.highlight-box strong{color:var(--accent)}
+.warn-box{background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:16px 18px;margin:14px 0;font-size:.85rem;color:var(--text);line-height:1.65}
+.warn-box strong{color:var(--warn)}
+.doc-footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 24px}
+.doc-footer-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.doc-footer-logo{font-family:var(--fhead);font-size:.9rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.doc-footer-links{display:flex;gap:18px}
+.doc-footer-links a{font-size:.75rem;color:var(--muted);transition:color .2s}
+.doc-footer-links a:hover{color:var(--accent);text-decoration:none}
+.doc-footer-copy{font-size:.72rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav class="nb">
+  <div class="nb-inner">
+    <div class="nb-logo" onclick="window.location.href='index.html'">LearnTogether</div>
+    <a class="nb-back" onclick="window.history.back()" style="cursor:pointer">← Back to Portal</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">📋 Legal Agreement</div>
+  <h1>Terms of <em>Service</em></h1>
+  <div class="hero-sub">By using LearnTogether, you agree to these terms. Please read them carefully before using the platform.</div>
+  <div class="hero-meta">
+    <span>📅 Last updated: March 2026</span>
+    <span>📖 ~6 min read</span>
+    <span>⚖️ Binding Agreement</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <aside class="toc-wrap">
+    <div class="toc-title">On this page</div>
+    <ul class="toc-list">
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#platform">Platform Description</a></li>
+      <li><a href="#accounts">User Accounts</a></li>
+      <li><a href="#acceptable-use">Acceptable Use</a></li>
+      <li><a href="#admin-rights">Administrator Rights</a></li>
+      <li><a href="#content">Course Content</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#disclaimers">Disclaimers</a></li>
+      <li><a href="#limitation">Limitation of Liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#governing-law">Governing Law</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+
+  <main class="doc-content">
+
+    <div class="section" id="acceptance">
+      <span class="section-num">01 — Agreement</span>
+      <h2>Acceptance of Terms</h2>
+      <p>By accessing or using the LearnTogether platform ("Platform", "Service"), you confirm that you have read, understood, and agree to be bound by these Terms of Service ("Terms").</p>
+      <p>If you are accessing the Platform on behalf of an organisation, you represent that you have the authority to bind that organisation to these Terms.</p>
+      <div class="warn-box">
+        <strong>Important:</strong> If you do not agree to these Terms, you must immediately stop using the Platform. Continued use constitutes acceptance of these Terms in their entirety.
+      </div>
+    </div>
+
+    <div class="section" id="platform">
+      <span class="section-num">02 — Platform</span>
+      <h2>Platform Description</h2>
+      <p>LearnTogether is a private educational portal that provides access to curated learning resources and course links. The Platform is operated and administered by the LearnTogether administrator.</p>
+      <ul>
+        <li>The Platform provides links to external educational resources — it does not host course content directly</li>
+        <li>Access to the Platform is by invitation only — user accounts are created exclusively by the administrator</li>
+        <li>The Platform tracks learning progress to help users and administrators monitor course completion</li>
+        <li>Features include course browsing, progress tracking, reviews, bookmarks, and completion certificates</li>
+      </ul>
+    </div>
+
+    <div class="section" id="accounts">
+      <span class="section-num">03 — Accounts</span>
+      <h2>User Accounts and Responsibilities</h2>
+      <p>All user accounts are created and managed by the platform administrator. By having an account you agree to:</p>
+      <ul>
+        <li><strong>Keep your credentials secure</strong> — do not share your username or password with anyone</li>
+        <li><strong>Notify the administrator</strong> if you suspect your account has been compromised</li>
+        <li><strong>Provide accurate information</strong> in any reviews or feedback you submit</li>
+        <li><strong>Take responsibility</strong> for all activity that occurs under your account</li>
+        <li><strong>Log out</strong> after each session when using shared devices</li>
+      </ul>
+      <p>You may update your password at any time through the platform settings. The administrator reserves the right to reset or revoke account access at any time.</p>
+    </div>
+
+    <div class="section" id="acceptable-use">
+      <span class="section-num">04 — Acceptable Use</span>
+      <h2>Acceptable Use Policy</h2>
+      <p>You agree to use the Platform only for its intended educational purpose. You must <strong>not</strong>:</p>
+      <ul>
+        <li>Attempt to gain unauthorised access to other user accounts, the administrator panel, or the underlying database</li>
+        <li>Submit false, misleading, or defamatory reviews or ratings</li>
+        <li>Use the Platform to distribute spam, malware, or harmful content</li>
+        <li>Attempt to reverse-engineer, scrape, or extract data from the Platform in bulk</li>
+        <li>Share your account credentials with others or allow others to access the Platform using your account</li>
+        <li>Interfere with the proper functioning of the Platform</li>
+        <li>Use the Platform for any unlawful purpose</li>
+      </ul>
+      <div class="warn-box">
+        <strong>Violation of this policy</strong> may result in immediate account suspension or permanent termination without notice.
+      </div>
+    </div>
+
+    <div class="section" id="admin-rights">
+      <span class="section-num">05 — Administration</span>
+      <h2>Administrator Rights and Responsibilities</h2>
+      <p>The platform administrator has the following rights and responsibilities:</p>
+      <ul>
+        <li>Create, modify, suspend, and delete user accounts at any time</li>
+        <li>Add, edit, reorder, and remove courses from the platform</li>
+        <li>View user progress, activity logs, and engagement data</li>
+        <li>Post platform-wide announcements to all users</li>
+        <li>Lock the platform for maintenance</li>
+        <li>Access and export user data for administrative purposes</li>
+      </ul>
+      <p>The administrator is responsible for ensuring the platform is used appropriately and that course content linked from the platform is suitable for the intended audience.</p>
+    </div>
+
+    <div class="section" id="content">
+      <span class="section-num">06 — Content</span>
+      <h2>Course Content and External Links</h2>
+      <p>LearnTogether provides links to external learning resources on third-party websites. Important disclaimers regarding this content:</p>
+      <ul>
+        <li>We do not own, control, or host any of the linked course content</li>
+        <li>We are not responsible for the accuracy, availability, or quality of external resources</li>
+        <li>External websites have their own privacy policies and terms of service which apply when you visit them</li>
+        <li>Course links may become unavailable or change without notice</li>
+        <li>We do not endorse the views expressed in externally linked materials</li>
+      </ul>
+      <p><strong>User-generated content</strong> such as reviews and ratings submitted on the Platform are the responsibility of the user who submitted them. We reserve the right to remove any content that violates these Terms.</p>
+    </div>
+
+    <div class="section" id="ip">
+      <span class="section-num">07 — Intellectual Property</span>
+      <h2>Intellectual Property Rights</h2>
+      <p>The LearnTogether platform, including its design, layout, interface, and branding, is the intellectual property of the LearnTogether administrator.</p>
+      <ul>
+        <li>You may not copy, reproduce, or redistribute the platform's interface or code without permission</li>
+        <li>The "LearnTogether" name and logo are proprietary and may not be used without authorisation</li>
+        <li>Content you submit (reviews, notes) remains yours, but you grant us a licence to display it on the platform</li>
+        <li>Certificates generated by the platform are for personal use only</li>
+      </ul>
+    </div>
+
+    <div class="section" id="privacy">
+      <span class="section-num">08 — Privacy</span>
+      <h2>Privacy and Data</h2>
+      <p>Your use of the Platform is also governed by our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. By using the Platform, you consent to data collection and use as described in the Privacy Policy.</p>
+    </div>
+
+    <div class="section" id="disclaimers">
+      <span class="section-num">09 — Disclaimers</span>
+      <h2>Disclaimers of Warranties</h2>
+      <p>The Platform is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without warranties of any kind, either express or implied, including but not limited to:</p>
+      <ul>
+        <li>Warranties of merchantability or fitness for a particular purpose</li>
+        <li>Uninterrupted, error-free, or secure access to the Platform</li>
+        <li>Accuracy or completeness of any content on the Platform</li>
+        <li>Continuous availability of linked external resources</li>
+      </ul>
+      <p>We do not warrant that using the Platform will result in any particular learning outcome or certification recognition.</p>
+    </div>
+
+    <div class="section" id="limitation">
+      <span class="section-num">10 — Liability</span>
+      <h2>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, LearnTogether and its administrator shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from:</p>
+      <ul>
+        <li>Your use of or inability to use the Platform</li>
+        <li>Any content obtained from external linked resources</li>
+        <li>Unauthorised access to your account</li>
+        <li>Any interruption or cessation of the Platform</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Maximum liability:</strong> In no event shall our total liability exceed the amount you have paid to use the Platform in the twelve months preceding the claim. As LearnTogether is provided free of charge, liability is effectively limited to the fullest extent permitted by law.
+      </div>
+    </div>
+
+    <div class="section" id="termination">
+      <span class="section-num">11 — Termination</span>
+      <h2>Termination of Access</h2>
+      <p>The administrator may terminate or suspend your access to the Platform at any time, with or without cause, and with or without notice. Reasons for termination may include:</p>
+      <ul>
+        <li>Violation of these Terms of Service</li>
+        <li>Extended period of inactivity</li>
+        <li>Discontinuation of the Platform</li>
+        <li>Request from the account holder</li>
+      </ul>
+      <p>Upon termination, your right to use the Platform ceases immediately. Provisions of these Terms that by their nature should survive termination shall continue to apply.</p>
+    </div>
+
+    <div class="section" id="governing-law">
+      <span class="section-num">12 — Governing Law</span>
+      <h2>Governing Law and Changes</h2>
+      <p>These Terms shall be governed by and construed in accordance with applicable laws. Any disputes shall be resolved through good-faith negotiation in the first instance.</p>
+      <p>We reserve the right to modify these Terms at any time. Updated Terms will be posted on this page with a new "Last updated" date. Your continued use of the Platform after changes constitutes acceptance of the new Terms.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <span class="section-num">13 — Contact</span>
+      <h2>Questions About These Terms</h2>
+      <p>If you have questions about these Terms of Service, please contact us:</p>
+      <div class="info-card">
+        <div class="info-card-title">Contact Information</div>
+        <div class="info-row"><span class="info-row-label">Platform</span><span class="info-row-val">LearnTogether</span></div>
+        <div class="info-row"><span class="info-row-label">Email</span><span class="info-row-val"><a href="mailto:learntogether288@gmail.com">learntogether288@gmail.com</a></span></div>
+        <div class="info-row"><span class="info-row-label">Response Time</span><span class="info-row-val">Within 48 hours</span></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="doc-footer">
+  <div class="doc-footer-inner">
+    <div class="doc-footer-logo">LearnTogether</div>
+    <div class="doc-footer-links">
+      <a href="index.html">Portal</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="doc-footer-copy">© 2026 LearnTogether. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 100) current = s.id; });
+  tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#'+current));
+});
+</script>
+</body>
+</html>
